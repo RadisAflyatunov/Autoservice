@@ -19,3 +19,31 @@ D:\3 курс\лабы Рпм\Каркас\AflyatunovAutoservice\obj\Debug\Aflya
 D:\3 курс\лабы Рпм\Каркас\AflyatunovAutoservice\obj\Debug\AflyatunovAutoservice.exe
 D:\3 курс\лабы Рпм\Каркас\AflyatunovAutoservice\obj\Debug\AflyatunovAutoservice.pdb
 D:\3 курс\лабы Рпм\Каркас\AflyatunovAutoservice\obj\Debug\App.baml
+D:\3 курс\лабы Рпм\лаба 4\Autoservice\AflyatunovAutoservice\bin\Debug\AflyatunovAutoservice.exe.config
+D:\3 курс\лабы Рпм\лаба 4\Autoservice\AflyatunovAutoservice\bin\Debug\AflyatunovAutoservice.exe
+D:\3 курс\лабы Рпм\лаба 4\Autoservice\AflyatunovAutoservice\bin\Debug\AflyatunovAutoservice.pdb
+D:\3 курс\лабы Рпм\лаба 4\Autoservice\AflyatunovAutoservice\obj\Debug\AflyatunovAutoservice.csproj.AssemblyReference.cache
+D:\3 курс\лабы Рпм\лаба 4\Autoservice\AflyatunovAutoservice\obj\Debug\AflyatunovAutoservice.csproj.SuggestedBindingRedirects.cache
+D:\3 курс\лабы Рпм\лаба 4\Autoservice\AflyatunovAutoservice\obj\Debug\AddEditPage.g.cs
+D:\3 курс\лабы Рпм\лаба 4\Autoservice\AflyatunovAutoservice\obj\Debug\MainWindow.g.cs
+D:\3 курс\лабы Рпм\лаба 4\Autoservice\AflyatunovAutoservice\obj\Debug\ServicePage.g.cs
+D:\3 курс\лабы Рпм\лаба 4\Autoservice\AflyatunovAutoservice\obj\Debug\App.g.cs
+D:\3 курс\лабы Рпм\лаба 4\Autoservice\AflyatunovAutoservice\obj\Debug\AflyatunovAutoservice_MarkupCompile.cache
+D:\3 курс\лабы Рпм\лаба 4\Autoservice\AflyatunovAutoservice\obj\Debug\AflyatunovAutoservice_MarkupCompile.lref
+D:\3 курс\лабы Рпм\лаба 4\Autoservice\AflyatunovAutoservice\obj\Debug\App.baml
+D:\3 курс\лабы Рпм\лаба 4\Autoservice\AflyatunovAutoservice\obj\Debug\AddEditPage.baml
+D:\3 курс\лабы Рпм\лаба 4\Autoservice\AflyatunovAutoservice\obj\Debug\MainWindow.baml
+D:\3 курс\лабы Рпм\лаба 4\Autoservice\AflyatunovAutoservice\obj\Debug\ServicePage.baml
+D:\3 курс\лабы Рпм\лаба 4\Autoservice\AflyatunovAutoservice\obj\Debug\AflyatunovAutoservice.g.resources
+D:\3 курс\лабы Рпм\лаба 4\Autoservice\AflyatunovAutoservice\obj\Debug\AflyatunovAutoservice.Properties.Resources.resources
+D:\3 курс\лабы Рпм\лаба 4\Autoservice\AflyatunovAutoservice\obj\Debug\AflyatunovAutoservice.csproj.GenerateResource.cache
+D:\3 курс\лабы Рпм\лаба 4\Autoservice\AflyatunovAutoservice\obj\Debug\AflyatunovAutoservice.csproj.CoreCompileInputs.cache
+D:\3 курс\лабы Рпм\лаба 4\Autoservice\AflyatunovAutoservice\obj\Debug\AflyatunovAutoservice.exe
+D:\3 курс\лабы Рпм\лаба 4\Autoservice\AflyatunovAutoservice\obj\Debug\AflyatunovAutoservice.pdb
+D:\3 курс\лабы Рпм\лаба 4\Autoservice\AflyatunovAutoservice\bin\Debug\EntityFramework.dll
+D:\3 курс\лабы Рпм\лаба 4\Autoservice\AflyatunovAutoservice\bin\Debug\EntityFramework.SqlServer.dll
+D:\3 курс\лабы Рпм\лаба 4\Autoservice\AflyatunovAutoservice\bin\Debug\EntityFramework.xml
+D:\3 курс\лабы Рпм\лаба 4\Autoservice\AflyatunovAutoservice\bin\Debug\EntityFramework.SqlServer.xml
+D:\3 курс\лабы Рпм\лаба 4\Autoservice\AflyatunovAutoservice\bin\Debug\ru\EntityFramework.resources.dll
+D:\3 курс\лабы Рпм\лаба 4\Autoservice\AflyatunovAutoservice\obj\Debug\AflyatunovAutoservice_Content.g.cs
+D:\3 курс\лабы Рпм\лаба 4\Autoservice\AflyatunovAutoservice\obj\Debug\AflyatunovAutoservice.csproj.CopyComplete

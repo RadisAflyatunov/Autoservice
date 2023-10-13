@@ -23,11 +23,16 @@ namespace AflyatunovAutoservice
         public ServicePage()
         {
             InitializeComponent();
+
+            var currentServices = AflyatunovAutoserviceEntities.GetContext().Service.ToList();
+
+            ServiceListView.ItemsSource = currentServices;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Manager.MainFrame.Navigate(new AddEditPage());
+    
         }
     }
 }
