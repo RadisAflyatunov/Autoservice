@@ -194,14 +194,28 @@
       <DependentUpon>AflyatunovModel.edmx</DependentUpon>
       <LastGenOutput>AflyatunovModel.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="resources\service_layout.png" />
-    <Resource Include="resources\service_logo.ico" />
-    <Resource Include="resources\service_logo.png" />
+    <Resource Include="res\Images\picture.jpeg" />
+    <Resource Include="res\diz.jpg" />
+    <Resource Include="res\rulevoe-upravlenie-avtomobilya.jpg" />
+    <Resource Include="res\transmission.jpg" />
+    <Resource Include="res\АКПП.jpg" />
+    <Resource Include="res\Вариатор.jpg" />
+    <Resource Include="res\Выхлопная система.jpg" />
+    <Resource Include="res\ГУР.png" />
+    <Resource Include="res\Двигатель.png" />
+    <Resource Include="res\Дополнительные услуги.png" />
+    <Resource Include="res\Кондиционер.jpg" />
+    <Resource Include="res\КПП.png" />
+    <Resource Include="res\Подвеска.png" />
+    <Resource Include="res\Сцепление.jpg" />
+    <Resource Include="res\Техническое обслуживание.png" />
+    <Resource Include="res\Топливная система.png" />
+    <Resource Include="res\Шиномонтаж.jpg" />
+    <Resource Include="res\Электрика.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
