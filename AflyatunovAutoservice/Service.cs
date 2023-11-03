@@ -23,7 +23,7 @@ namespace AflyatunovAutoservice
     
         public int ID { get; set; }
         public string Name_of_the_service { get; set; }
-        public byte[] Main_Image { get; set; }
+        public string Main_Image { get; set; }
         public string Duration { get; set; }
         public decimal Cost { get; set; }
         public Nullable<double> Current_discount { get; set; }

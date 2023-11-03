@@ -23,7 +23,9 @@ namespace AflyatunovAutoservice
         public MainWindow()
         {
             InitializeComponent();
+
             MainFrame.Navigate(new ServicePage());
+
             Manager.MainFrame = MainFrame;
         }
 

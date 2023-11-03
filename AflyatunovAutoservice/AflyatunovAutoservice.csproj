@@ -122,9 +122,6 @@
     <Compile Include="ServicePhoto.cs">
       <DependentUpon>AflyatunovModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="sysdiagrams.cs">
-      <DependentUpon>AflyatunovModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Tag.cs">
       <DependentUpon>AflyatunovModel.tt</DependentUpon>
     </Compile>
@@ -184,38 +181,39 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="AflyatunovModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>AflyatunovModel.Context.cs</LastGenOutput>
       <DependentUpon>AflyatunovModel.edmx</DependentUpon>
+      <LastGenOutput>AflyatunovModel.Context.cs</LastGenOutput>
     </Content>
     <Content Include="AflyatunovModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>AflyatunovModel.edmx</DependentUpon>
       <LastGenOutput>AflyatunovModel.cs</LastGenOutput>
     </Content>
-    <Resource Include="res\Images\picture.jpeg" />
-    <Resource Include="res\diz.jpg" />
-    <Resource Include="res\rulevoe-upravlenie-avtomobilya.jpg" />
-    <Resource Include="res\transmission.jpg" />
-    <Resource Include="res\АКПП.jpg" />
-    <Resource Include="res\Вариатор.jpg" />
-    <Resource Include="res\Выхлопная система.jpg" />
-    <Resource Include="res\ГУР.png" />
-    <Resource Include="res\Двигатель.png" />
-    <Resource Include="res\Дополнительные услуги.png" />
-    <Resource Include="res\Кондиционер.jpg" />
-    <Resource Include="res\КПП.png" />
-    <Resource Include="res\Подвеска.png" />
-    <Resource Include="res\Сцепление.jpg" />
-    <Resource Include="res\Техническое обслуживание.png" />
-    <Resource Include="res\Топливная система.png" />
-    <Resource Include="res\Шиномонтаж.jpg" />
-    <Resource Include="res\Электрика.png" />
+    <Resource Include="images\service_logo.ico" />
+    <Resource Include="images\service_logo.png" />
+    <Resource Include="Услуги автосервиса\diz.jpg" />
+    <Resource Include="Услуги автосервиса\picture.jpeg" />
+    <Resource Include="Услуги автосервиса\rulevoe-upravlenie-avtomobilya.jpg" />
+    <Resource Include="Услуги автосервиса\transmission.jpg" />
+    <Resource Include="Услуги автосервиса\АКПП.jpg" />
+    <Resource Include="Услуги автосервиса\Вариатор.jpg" />
+    <Resource Include="Услуги автосервиса\Выхлопная система.jpg" />
+    <Resource Include="Услуги автосервиса\ГУР.png" />
+    <Resource Include="Услуги автосервиса\Двигатель.png" />
+    <Resource Include="Услуги автосервиса\Дополнительные услуги.png" />
+    <Resource Include="Услуги автосервиса\Кондиционер.jpg" />
+    <Resource Include="Услуги автосервиса\КПП.png" />
+    <Resource Include="Услуги автосервиса\Подвеска.png" />
+    <Resource Include="Услуги автосервиса\Сцепление.jpg" />
+    <Resource Include="Услуги автосервиса\Техническое обслуживание.png" />
+    <Resource Include="Услуги автосервиса\Топливная система.png" />
+    <Resource Include="Услуги автосервиса\Шиномонтаж.jpg" />
+    <Resource Include="Услуги автосервиса\Электрика.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

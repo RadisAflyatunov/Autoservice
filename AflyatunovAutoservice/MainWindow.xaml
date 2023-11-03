@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AflyatunovAutoservice"
         mc:Ignorable="d"
-        Title="AflyatunovAutoservice" Height="450" Width="800" FontFamily="TW Cen MT" Icon="/resources/service_logo.ico" >
+        Title="AflyatunovAutoservice" Height="450" Width="800" FontFamily="TW Cen MT" Icon="images/service_logo.png" >
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="75"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
-        <Image Source="/resources/service_logo.png" HorizontalAlignment="Left"></Image>
+        <Image Source="images/service_logo.png" HorizontalAlignment="Left"/>
         <TextBlock Text="Услуги автосервиса" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
         <Frame Grid.Row="1" Name="MainFrame" ContentRendered="MainFrame_ContentRendered" NavigationUIVisibility="Hidden"></Frame>
         <Button Content="Назад" Name="BtnBack" HorizontalAlignment="Right"  Click="BtnBack_Click"></Button>

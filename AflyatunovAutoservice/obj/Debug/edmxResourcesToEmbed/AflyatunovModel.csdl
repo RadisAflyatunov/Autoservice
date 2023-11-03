@@ -116,7 +116,7 @@
     </Key>
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Name_of_the_service" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Main_Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Main_Image" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
     <Property Name="Duration" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Cost" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="Current_discount" Type="Double" />
@@ -143,16 +143,6 @@
     <Property Name="ServiceID" Type="Int32" Nullable="false" />
     <Property Name="PhotoPath" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="Service" Relationship="Self.FK_ServicePhoto_Service1" FromRole="ServicePhoto" ToRole="Service" />
-  </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
   <EntityType Name="Tag">
     <Key>
@@ -292,7 +282,6 @@
     <EntitySet Name="Service" EntityType="Self.Service" />
     <EntitySet Name="Service111" EntityType="Self.Service111" />
     <EntitySet Name="ServicePhoto" EntityType="Self.ServicePhoto" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
     <EntitySet Name="Tag" EntityType="Self.Tag" />
     <AssociationSet Name="FK_Client_Gender" Association="Self.FK_Client_Gender">
       <End Role="Gender" EntitySet="Gender" />

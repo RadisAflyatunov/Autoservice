@@ -12,16 +12,19 @@ namespace AflyatunovAutoservice
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-
+    
     public partial class AflyatunovAutoserviceEntities : DbContext
     {
+
         private static AflyatunovAutoserviceEntities _context;
+
         public static AflyatunovAutoserviceEntities GetContext()
         {
             if (_context == null)
                 _context = new AflyatunovAutoserviceEntities();
-
             return _context;
+
+            
         }
         public AflyatunovAutoserviceEntities()
             : base("name=AflyatunovAutoserviceEntities")
@@ -45,7 +48,6 @@ namespace AflyatunovAutoservice
         public virtual DbSet<Service> Service { get; set; }
         public virtual DbSet<Service111> Service111 { get; set; }
         public virtual DbSet<ServicePhoto> ServicePhoto { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Tag> Tag { get; set; }
     }
 }
