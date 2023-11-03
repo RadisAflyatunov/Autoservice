@@ -15,17 +15,6 @@ namespace AflyatunovAutoservice
     
     public partial class AflyatunovAutoserviceEntities : DbContext
     {
-
-        private static AflyatunovAutoserviceEntities _context;
-
-        public static AflyatunovAutoserviceEntities GetContext()
-        {
-            if (_context == null)
-                _context = new AflyatunovAutoserviceEntities();
-            return _context;
-
-            
-        }
         public AflyatunovAutoserviceEntities()
             : base("name=AflyatunovAutoserviceEntities")
         {
