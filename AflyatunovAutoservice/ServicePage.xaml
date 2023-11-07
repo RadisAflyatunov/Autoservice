@@ -7,9 +7,9 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Услуги атосервиса" FontFamily="Tw Cen MT"
-      IsVisibleChanged="Page_IsVisibleChanged"> 
-    
-    
+      IsVisibleChanged="Page_IsVisibleChanged">
+
+
     <Grid Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"></RowDefinition>
@@ -68,6 +68,8 @@
         </StackPanel>
         <Button Content="Добавить" Name="AddButton" Click="AddButton_Click"
                 HorizontalAlignment="Right" VerticalAlignment="Bottom"></Button>
+        
+
         <ListView Name="ServiceListView" Grid.Row="2">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -104,14 +106,15 @@
                         <StackPanel Grid.Column="1" Grid.Row="3" Orientation="Horizontal">
                             <Button Name="EditButton" Content="редактировать" Margin="2" Click="EditButton_Click"></Button>
                             <Button Name="DeleteButton" Content="удалить" Margin="2" Click="DeleteButton_Click"></Button>
+                            <Button Name="SignUpButton" Content="записать" Margin="5" Click="SignUpButton_Click"></Button>
                         </StackPanel>
 
-                        
+
 
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
     </Grid>
-    
+
 </Page>

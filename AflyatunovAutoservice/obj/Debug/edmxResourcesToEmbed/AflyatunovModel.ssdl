@@ -22,21 +22,6 @@
     <Property Name="Email" Type="nvarchar" MaxLength="225" Nullable="false" />
     <Property Name="Date_of_registration" Type="date" Nullable="false" />
   </EntityType>
-  <EntityType Name="Client111">
-    <Key>
-      <PropertyRef Name="ID" />
-    </Key>
-    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="Patronymic" Type="nvarchar" MaxLength="50" />
-    <Property Name="Birthday" Type="date" />
-    <Property Name="RegistrationDate" Type="datetime" Nullable="false" />
-    <Property Name="Email" Type="nvarchar" MaxLength="255" />
-    <Property Name="Phone" Type="nvarchar" MaxLength="20" Nullable="false" />
-    <Property Name="GenderCode" Type="nchar" MaxLength="1" Nullable="false" />
-    <Property Name="PhotoPath" Type="nvarchar" MaxLength="1000" />
-  </EntityType>
   <EntityType Name="ClientService">
     <Key>
       <PropertyRef Name="ID" />
@@ -107,21 +92,9 @@
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name_of_the_service" Type="nvarchar" MaxLength="100" Nullable="false" />
     <Property Name="Main_Image" Type="nvarchar" MaxLength="1000" />
-    <Property Name="Duration" Type="nvarchar" MaxLength="50" />
+    <Property Name="Duration" Type="nvarchar" MaxLength="300" Nullable="false" />
     <Property Name="Cost" Type="decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="Current_discount" Type="float" />
-  </EntityType>
-  <EntityType Name="Service111">
-    <Key>
-      <PropertyRef Name="ID" />
-    </Key>
-    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Title" Type="nvarchar" MaxLength="100" Nullable="false" />
-    <Property Name="Cost" Type="money" Nullable="false" />
-    <Property Name="DurationInSeconds" Type="int" Nullable="false" />
-    <Property Name="Description" Type="nvarchar(max)" />
-    <Property Name="Discount" Type="float" />
-    <Property Name="MainImagePath" Type="nvarchar" MaxLength="1000" />
   </EntityType>
   <EntityType Name="ServicePhoto">
     <Key>
@@ -267,7 +240,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_ServicePhoto_Service1">
+  <Association Name="FK_ServicePhoto_Service">
     <End Role="Service" Type="Self.Service" Multiplicity="1" />
     <End Role="ServicePhoto" Type="Self.ServicePhoto" Multiplicity="*" />
     <ReferentialConstraint>
@@ -306,7 +279,6 @@
   <EntityContainer Name="Хранилище AflyatunovAutoserviceModelContainer">
     <EntitySet Name="AttachedProduct" EntityType="Self.AttachedProduct" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Client" EntityType="Self.Client" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Client111" EntityType="Self.Client111" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ClientService" EntityType="Self.ClientService" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="DocumentByService" EntityType="Self.DocumentByService" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Gender" EntityType="Self.Gender" Schema="dbo" store:Type="Tables" />
@@ -315,7 +287,6 @@
     <EntitySet Name="ProductPhoto" EntityType="Self.ProductPhoto" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ProductSale" EntityType="Self.ProductSale" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Service" EntityType="Self.Service" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Service111" EntityType="Self.Service111" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ServicePhoto" EntityType="Self.ServicePhoto" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Tag" EntityType="Self.Tag" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TagOfClient" EntityType="Self.TagOfClient" Schema="dbo" store:Type="Tables" />
@@ -359,7 +330,7 @@
       <End Role="Product" EntitySet="Product" />
       <End Role="ProductSale" EntitySet="ProductSale" />
     </AssociationSet>
-    <AssociationSet Name="FK_ServicePhoto_Service1" Association="Self.FK_ServicePhoto_Service1">
+    <AssociationSet Name="FK_ServicePhoto_Service" Association="Self.FK_ServicePhoto_Service">
       <End Role="Service" EntitySet="Service" />
       <End Role="ServicePhoto" EntitySet="ServicePhoto" />
     </AssociationSet>

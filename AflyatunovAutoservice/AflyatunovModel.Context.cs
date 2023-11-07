@@ -15,6 +15,14 @@ namespace AflyatunovAutoservice
     
     public partial class AflyatunovAutoserviceEntities : DbContext
     {
+        private static AflyatunovAutoserviceEntities _context;
+
+        public static AflyatunovAutoserviceEntities GetContext()
+        {
+            if(_context == null)
+                _context = new AflyatunovAutoserviceEntities();
+            return _context;
+        }
         public AflyatunovAutoserviceEntities()
             : base("name=AflyatunovAutoserviceEntities")
         {
@@ -26,7 +34,6 @@ namespace AflyatunovAutoservice
         }
     
         public virtual DbSet<Client> Client { get; set; }
-        public virtual DbSet<Client111> Client111 { get; set; }
         public virtual DbSet<ClientService> ClientService { get; set; }
         public virtual DbSet<DocumentByService> DocumentByService { get; set; }
         public virtual DbSet<Gender> Gender { get; set; }
@@ -35,7 +42,6 @@ namespace AflyatunovAutoservice
         public virtual DbSet<ProductPhoto> ProductPhoto { get; set; }
         public virtual DbSet<ProductSale> ProductSale { get; set; }
         public virtual DbSet<Service> Service { get; set; }
-        public virtual DbSet<Service111> Service111 { get; set; }
         public virtual DbSet<ServicePhoto> ServicePhoto { get; set; }
         public virtual DbSet<Tag> Tag { get; set; }
     }

@@ -4,9 +4,8 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="8e5e9f8b1e4a49b4ae0220437e45c4fa" Name="Diagram1" ZoomLevel="127">
+      <Diagram DiagramId="c8724708a35f4011b90d9081a04ba099" Name="Diagram1">
         <EntityTypeShape EntityType="AflyatunovAutoserviceModel.Client" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="AflyatunovAutoserviceModel.Client111" Width="1.5" PointX="7.75" PointY="2.125" IsExpanded="true" />
         <EntityTypeShape EntityType="AflyatunovAutoserviceModel.ClientService" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />
         <EntityTypeShape EntityType="AflyatunovAutoserviceModel.DocumentByService" Width="1.5" PointX="5.25" PointY="9.875" IsExpanded="true" />
         <EntityTypeShape EntityType="AflyatunovAutoserviceModel.Gender" Width="1.5" PointX="1.5" PointY="13.25" IsExpanded="true" />
@@ -15,7 +14,6 @@
         <EntityTypeShape EntityType="AflyatunovAutoserviceModel.ProductPhoto" Width="1.5" PointX="5.25" PointY="4" IsExpanded="true" />
         <EntityTypeShape EntityType="AflyatunovAutoserviceModel.ProductSale" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="AflyatunovAutoserviceModel.Service" Width="1.5" PointX="0.75" PointY="16.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="AflyatunovAutoserviceModel.Service111" Width="1.5" PointX="7.75" PointY="6.125" IsExpanded="true" />
         <EntityTypeShape EntityType="AflyatunovAutoserviceModel.ServicePhoto" Width="1.5" PointX="3" PointY="18.875" IsExpanded="true" />
         <EntityTypeShape EntityType="AflyatunovAutoserviceModel.Tag" Width="1.5" PointX="3" PointY="16.25" IsExpanded="true" />
         <AssociationConnector Association="AflyatunovAutoserviceModel.FK_Client_Gender" ManuallyRouted="false" />
@@ -26,7 +24,7 @@
         <AssociationConnector Association="AflyatunovAutoserviceModel.FK_Product_Manufacturer" ManuallyRouted="false" />
         <AssociationConnector Association="AflyatunovAutoserviceModel.FK_ProductPhoto_Product" ManuallyRouted="false" />
         <AssociationConnector Association="AflyatunovAutoserviceModel.FK_ProductSale_Product" ManuallyRouted="false" />
-        <AssociationConnector Association="AflyatunovAutoserviceModel.FK_ServicePhoto_Service1" ManuallyRouted="false" />
+        <AssociationConnector Association="AflyatunovAutoserviceModel.FK_ServicePhoto_Service" ManuallyRouted="false" />
         <AssociationConnector Association="AflyatunovAutoserviceModel.AttachedProduct" ManuallyRouted="false" />
         <AssociationConnector Association="AflyatunovAutoserviceModel.TagOfClient" ManuallyRouted="false" />
       </Diagram>
