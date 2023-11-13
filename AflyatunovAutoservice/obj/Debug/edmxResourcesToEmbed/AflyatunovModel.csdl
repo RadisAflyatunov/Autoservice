@@ -102,7 +102,7 @@
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Name_of_the_service" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Main_Image" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
-    <Property Name="Duration" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Duration" Type="Int16" Nullable="false" />
     <Property Name="Cost" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="Current_discount" Type="Double" />
     <NavigationProperty Name="ClientService" Relationship="Self.FK_ClientService_Service" FromRole="Service" ToRole="ClientService" />

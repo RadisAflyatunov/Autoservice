@@ -172,6 +172,7 @@ D:\3 курс\лабы Рпм\лаба 8\Autoservice\AflyatunovAutoservice\obj\D
 D:\3 курс\лабы Рпм\лаба 8\Autoservice\AflyatunovAutoservice\obj\Debug\AddEditPage.g.cs
 D:\3 курс\лабы Рпм\лаба 8\Autoservice\AflyatunovAutoservice\obj\Debug\MainWindow.g.cs
 D:\3 курс\лабы Рпм\лаба 8\Autoservice\AflyatunovAutoservice\obj\Debug\ServicePage.g.cs
+D:\3 курс\лабы Рпм\лаба 8\Autoservice\AflyatunovAutoservice\obj\Debug\SignUpPage.g.cs
 D:\3 курс\лабы Рпм\лаба 8\Autoservice\AflyatunovAutoservice\obj\Debug\App.g.cs
 D:\3 курс\лабы Рпм\лаба 8\Autoservice\AflyatunovAutoservice\obj\Debug\AflyatunovAutoservice_Content.g.cs
 D:\3 курс\лабы Рпм\лаба 8\Autoservice\AflyatunovAutoservice\obj\Debug\AflyatunovAutoservice_MarkupCompile.cache
@@ -180,6 +181,7 @@ D:\3 курс\лабы Рпм\лаба 8\Autoservice\AflyatunovAutoservice\obj\D
 D:\3 курс\лабы Рпм\лаба 8\Autoservice\AflyatunovAutoservice\obj\Debug\AddEditPage.baml
 D:\3 курс\лабы Рпм\лаба 8\Autoservice\AflyatunovAutoservice\obj\Debug\MainWindow.baml
 D:\3 курс\лабы Рпм\лаба 8\Autoservice\AflyatunovAutoservice\obj\Debug\ServicePage.baml
+D:\3 курс\лабы Рпм\лаба 8\Autoservice\AflyatunovAutoservice\obj\Debug\SignUpPage.baml
 D:\3 курс\лабы Рпм\лаба 8\Autoservice\AflyatunovAutoservice\obj\Debug\AflyatunovAutoservice.g.resources
 D:\3 курс\лабы Рпм\лаба 8\Autoservice\AflyatunovAutoservice\obj\Debug\AflyatunovAutoservice.Properties.Resources.resources
 D:\3 курс\лабы Рпм\лаба 8\Autoservice\AflyatunovAutoservice\obj\Debug\AflyatunovAutoservice.csproj.GenerateResource.cache
@@ -187,4 +189,3 @@ D:\3 курс\лабы Рпм\лаба 8\Autoservice\AflyatunovAutoservice\obj\D
 D:\3 курс\лабы Рпм\лаба 8\Autoservice\AflyatunovAutoservice\obj\Debug\AflyatunovAutoservice.csproj.CopyComplete
 D:\3 курс\лабы Рпм\лаба 8\Autoservice\AflyatunovAutoservice\obj\Debug\AflyatunovAutoservice.exe
 D:\3 курс\лабы Рпм\лаба 8\Autoservice\AflyatunovAutoservice\obj\Debug\AflyatunovAutoservice.pdb
-D:\3 курс\лабы Рпм\лаба 8\Autoservice\AflyatunovAutoservice\obj\Debug\SignUpPage.g.cs

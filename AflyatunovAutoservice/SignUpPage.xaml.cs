@@ -37,16 +37,23 @@ namespace AflyatunovAutoservice
         }
 
         private ClientService _currentClientService = new ClientService();
-        private void SaveBut0ton_Click(object sender, RoutedEventArgs e)
+    
+
+
+        private void SaveButtin_Click(object sender, RoutedEventArgs e)
         {
             StringBuilder errors = new StringBuilder();
 
+
             if (ComboClient.SelectedItem == null)
                 errors.AppendLine("Укажите ФИО клиента");
+
             if (StartDate.Text == "")
                 errors.AppendLine("Укажите дату услуги");
-            if (TBStart.Text == "")
-                errors.AppendLine("Укажите время начала услуги");
+
+            if (TBEnd.Text == "")
+                errors.AppendLine("Укажите правильно время начала услуги");
+
             if (errors.Length > 0)
             {
                 MessageBox.Show(errors.ToString());
@@ -55,7 +62,7 @@ namespace AflyatunovAutoservice
 
             _currentClientService.ClientID = ComboClient.SelectedIndex + 1;
             _currentClientService.ServiceID = _currentService.ID;
-            _currentClientService.StartTime = Convert.ToDateTime(_currentClientService);
+            _currentClientService.StartTime = Convert.ToDateTime(StartDate.Text + " " + TBStart.Text);
 
             if (_currentClientService.ID == 0)
                 AflyatunovAutoserviceEntities.GetContext().ClientService.Add(_currentClientService);
@@ -70,34 +77,47 @@ namespace AflyatunovAutoservice
             {
                 MessageBox.Show(ex.Message.ToString());
             }
-
         }
+
         private void TBStart_TextChanged(object sender, TextChangedEventArgs e)
         {
             string s = TBStart.Text;
+
             if (s.Length < 3 || s.Length > 5 || !s.Contains(':'))
                 TBEnd.Text = "";
             else
             {
                 string[] start = s.Split(new char[] { ':' });
+                try
+                {
 
-                int startHour = Convert.ToInt32(start[0].ToString()) * 60;
-                int startMin = Convert.ToInt32(start[1].ToString());
+                    if (Convert.ToInt32(start[0].ToString()) >= 0 && Convert.ToInt32(start[0].ToString()) <= 23 && Convert.ToInt32(start[1].ToString()) >= 0 && Convert.ToInt32(start[1].ToString()) <= 59 && start[1].Length == 2)
+                    {
+                        int startHour = Convert.ToInt32(start[0].ToString()) * 60;
+                        int startMin = Convert.ToInt32(start[1].ToString());
 
-                int sum = $"{startHour + startMin}{_currentService.Duration}";
+                        int sum = startHour + startMin + _currentService.Duration;
 
-                string EndHour = (sum / 60 % 24).ToString();
-                string EndMin = (sum % 60).ToString();
-                if (Convert.ToInt32(EndMin) / 10 == 0)
-                   {
-                       EndMin = '0' + EndMin;
-                   }
-                s = EndHour.ToString() + ":" + EndMin;
-                TBEnd.Text = s;
+                        string EndHour = (sum / 60 % 24).ToString();
+                        string EndMin = (sum % 60).ToString();
+                        if (Convert.ToInt32(EndMin) / 10 == 0)
+                        {
+                            EndMin = '0' + EndMin;
+                        }
+                        s = EndHour.ToString() + ":" + EndMin;
+                        TBEnd.Text = s;
+                    }
+                    else
+                    {
+                        TBEnd.Text = "";
+                    }
+                }
+                catch
+                {
+                    TBEnd.Text = "";
+                }
 
             }
         }
-
-
     }
 }
