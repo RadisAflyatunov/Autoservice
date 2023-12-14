@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -23,41 +24,81 @@ namespace AflyatunovAutoservice
     {
 
         private Posishen _currentServices = new Posishen();
-
         public AddEditPage(Posishen SelectedService)
         {
             InitializeComponent();
-
             if (SelectedService != null)
             {
                 this._currentServices = SelectedService;
             }
+            var _currentPos = ShaurmaEntities.GetContext().Posishen.ToList();
 
-
-            DataContext = _currentServices;
-
-            var _currentPosishen = shavaEntities.GetContext().Posishen.ToList();
-
-            ComboProd.ItemsSource = _currentPosishen;
+            ComboClient.ItemsSource = _currentPos;
         }
 
 
-        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        private void AddSale_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new AddEditPage(_currentServices as Posishen));
+        }
+
+        private void BackSale_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new AddEditPage((sender as Button).DataContext as Posishen));
+        }
+
+        private void AddProdHistoryBtn_Click(object sender, RoutedEventArgs e)
         {
             StringBuilder errors = new StringBuilder();
 
-            if (ComboProd.SelectedItem == null)
-                errors.AppendLine("Укажите продукт");
 
-            if(errors.Length > 0)
+            if (string.IsNullOrWhiteSpace(ProdCount.Text))
+            {
+                errors.AppendLine("Укажите количество");
+            }
+            else
+            {
+                int c = Convert.ToInt32(ProdCount.Text);
+                if (c < 1)
+                    errors.AppendLine("Укажите количество");
+            }
+
+            if (string.IsNullOrWhiteSpace(Countе.Text))
+            {
+                errors.AppendLine("Укажите номер");
+            }
+            else
+            {
+                int c = Convert.ToInt32(Countе.Text);
+                if (c < 1)
+                    errors.AppendLine("Укажите номер");
+            }
+           
+            if (errors.Length > 0)
             {
                 MessageBox.Show(errors.ToString());
                 return;
             }
 
-            
+            if (errors.Length == 0)
+            {
+                try
+                {
+                    ShaurmaEntities.GetContext().SaveChanges();
+                    MessageBox.Show("информация сохранена");
+                    Manager.MainFrame.GoBack();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
+            }
+        }
 
+        private void ComboProduct_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
 
         }
     }
 }
+

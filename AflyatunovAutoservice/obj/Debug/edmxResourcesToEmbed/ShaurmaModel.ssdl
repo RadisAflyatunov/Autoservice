@@ -1,7 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="Хранилище shaurmaModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="Хранилище ShaurmaModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <!--Ошибки, обнаруженные при создании:
-предупреждение 6002: В таблице или представлении "shaurma.dbo.Posishen" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+предупреждение 6002: В таблице или представлении "Шаурма на ходу.dbo.Entering" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+  <EntityType Name="Entering">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Login" />
+      <PropertyRef Name="Passsword" />
+      <PropertyRef Name="Who" />
+    </Key>
+    <Property Name="ID" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Login" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Passsword" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Who" Type="nchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "Шаурма на ходу.dbo.Posishen" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
   <EntityType Name="Posishen">
     <Key>
       <PropertyRef Name="Name" />
@@ -10,16 +24,30 @@
     <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Cost" Type="int" />
     <Property Name="WeightOrVolume" Type="nvarchar(max)" />
-    <Property Name="Image" Type="nvarchar(max)" />
+    <Property Name="MainImagePath" Type="nvarchar(max)" />
   </EntityType>
-  <EntityContainer Name="Хранилище shaurmaModelContainer">
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6013: Первичный ключ в таблице или представлении "Шаурма на ходу.dbo.Zakaz" не определен, его не удалось вывести. Эта таблица или представление исключены. Чтобы использовать сущность, необходимо проверить схему, добавить правильные ключи и раскомментировать ее.
+        <EntityType Name="Zakaz">
+          <Property Name="ID" Type="int" />
+          <Property Name="Posihen" Type="nvarchar(max)" />
+        </EntityType>-->
+  <EntityContainer Name="Хранилище ShaurmaModelContainer">
+    <EntitySet Name="Entering" EntityType="Self.Entering" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Entering].[ID] AS [ID], 
+    [Entering].[Login] AS [Login], 
+    [Entering].[Passsword] AS [Passsword], 
+    [Entering].[Who] AS [Who]
+    FROM [dbo].[Entering] AS [Entering]</DefiningQuery>
+    </EntitySet>
     <EntitySet Name="Posishen" EntityType="Self.Posishen" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
     [Posishen].[ID] AS [ID], 
     [Posishen].[Name] AS [Name], 
     [Posishen].[Cost] AS [Cost], 
     [Posishen].[WeightOrVolume] AS [WeightOrVolume], 
-    [Posishen].[Image] AS [Image]
+    [Posishen].[MainImagePath] AS [MainImagePath]
     FROM [dbo].[Posishen] AS [Posishen]</DefiningQuery>
     </EntitySet>
   </EntityContainer>

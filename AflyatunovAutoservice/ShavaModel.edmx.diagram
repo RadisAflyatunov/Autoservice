@@ -4,8 +4,9 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="d55bde1011544163b68d915fc22c7529" Name="Diagram1">
-        <EntityTypeShape EntityType="shavaModel.Posishen" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="18f9e17e080340fda6421bef9b451315" Name="Diagram1">
+        <EntityTypeShape EntityType="ShaurmaModel.Entering" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShaurmaModel.Posishen" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

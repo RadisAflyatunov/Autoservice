@@ -1,14 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="Хранилище shaurmaModelContainer" CdmEntityContainer="shaurmaEntities">
+  <EntityContainerMapping StorageEntityContainer="Хранилище ShaurmaModelContainer" CdmEntityContainer="ShaurmaEntities">
+    <EntitySetMapping Name="Entering">
+      <EntityTypeMapping TypeName="ShaurmaModel.Entering">
+        <MappingFragment StoreEntitySet="Entering">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Passsword" ColumnName="Passsword" />
+          <ScalarProperty Name="Who" ColumnName="Who" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Posishen">
-      <EntityTypeMapping TypeName="shaurmaModel.Posishen">
+      <EntityTypeMapping TypeName="ShaurmaModel.Posishen">
         <MappingFragment StoreEntitySet="Posishen">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Cost" ColumnName="Cost" />
           <ScalarProperty Name="WeightOrVolume" ColumnName="WeightOrVolume" />
-          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="MainImagePath" ColumnName="MainImagePath" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

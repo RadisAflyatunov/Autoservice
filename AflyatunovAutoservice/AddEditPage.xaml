@@ -10,37 +10,20 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="100"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="50*"></ColumnDefinition>
+            <ColumnDefinition Width="29*"></ColumnDefinition>
+            <ColumnDefinition Width="21*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <TextBlock Text="Название" FontSize="15" Grid.Column="0" Grid.Row="0"
-                   HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
-        <TextBlock Text="Стоимость" FontSize="15" Grid.Column="0" Grid.Row="1"
-                   HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
-
-        <TextBlock Text="Вес-обьем" FontSize="15" Grid.Column="0" Grid.Row="2"
-                   HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
-
-        <TextBlock Grid.Column="1" Grid.Row="0" Height="30"></TextBlock>
-        <TextBlock Grid.Column="1" Grid.Row="1" Height="30" Width="200"
-                   HorizontalAlignment="Left"></TextBlock>
-        <TextBlock Grid.Column="1" Grid.Row="2" Height="30" Width="200"
-                   HorizontalAlignment="Left"></TextBlock>
-        <TextBlock Grid.Column="1" Grid.Row="3" Height="30" Width="200"
-                   HorizontalAlignment="Left"></TextBlock>
-        <Button Name="SaveButton" Content="Сохранить" Grid.Row="4"
-                Grid.Column="0" Grid.ColumnSpan="2" Click="SaveButton_Click"></Button>
-
-        <ComboBox Grid.Column="1" Grid.Row="0" Height="30" Width="300" FontSize="15"
-                  Name="ComboProd" HorizontalAlignment="Left">
+        <TextBlock Grid.Column="0" Grid.Row="0" Text="Продукт" FontSize="20" Margin="10,10,10,10"></TextBlock>
+        <ComboBox Grid.Column="1" Height="30" Width="300" FontSize="15"
+                  Name="ComboClient" HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="50,8,0,9" ItemsSource="{Binding Path=Posishen}">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
@@ -49,10 +32,11 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
-        <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center">
-            <Label FontSize="20" Content="{Binding Cost}" Width="200" Height="20"></Label>
-        </StackPanel>
-        
-        
+        <TextBlock Grid.Column="0" Grid.Row="1" Text="Количество" FontSize="20" Margin="10,10,10,10" Name="CountTB"></TextBlock>
+        <TextBox  Grid.Column="1" Grid.Row="1" FontSize="20" Margin="50,10,50,10" Width="300" Name="ProdCount" Grid.ColumnSpan="2" HorizontalAlignment="Left"></TextBox>
+        <TextBlock Grid.Column="0" Grid.Row="2" Text="Номер" FontSize="20" Margin="10,10,10,10" ></TextBlock>
+        <TextBox  Grid.Column="1" Grid.Row="2" FontSize="20" Margin="50,10,50,10" Width="300" Name="Countе" Grid.ColumnSpan="2" HorizontalAlignment="Left"></TextBox>
+        <Button Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Left" Content="Добавить" VerticalAlignment="Top" Name="AddProdHistoryBtn" Click="AddProdHistoryBtn_Click" Height="30" Width="176" Background="#FFFF9C1A" Margin="312,20,0,0"/>
+
     </Grid>
 </Page>

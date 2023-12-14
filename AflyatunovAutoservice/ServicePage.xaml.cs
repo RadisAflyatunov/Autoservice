@@ -32,7 +32,7 @@ namespace AflyatunovAutoservice
         {
             InitializeComponent();
 
-            var currentServices = shavaEntities.GetContext().Posishen.ToList();
+            var currentServices = ShaurmaEntities.GetContext().Posishen.ToList();
 
             ServiceListView.ItemsSource = currentServices;
 
@@ -129,7 +129,7 @@ namespace AflyatunovAutoservice
 
         private void UpdatesServices()
         {
-            var currentServices = shavaEntities.GetContext().Posishen.ToList();
+            var currentServices = ShaurmaEntities.GetContext().Posishen.ToList();
 
             currentServices = currentServices.Where(p => p.Name.ToLower().Contains(TBoxSearch.Text.ToLower())).ToList();
 
@@ -153,8 +153,8 @@ namespace AflyatunovAutoservice
         {
             if(Visibility == Visibility.Visible)
             {
-                shavaEntities.GetContext().ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
-                ServiceListView.ItemsSource = shavaEntities.GetContext().Posishen.ToList();
+                ShaurmaEntities.GetContext().ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
+                ServiceListView.ItemsSource = ShaurmaEntities.GetContext().Posishen.ToList();
             }
 
             UpdatesServices();
@@ -180,12 +180,17 @@ namespace AflyatunovAutoservice
 
         private void EditButton_Click(object sender, RoutedEventArgs e)
         {
-            Manager.MainFrame.Navigate(new AddEditPage(null));
+            Manager.MainFrame.Navigate(new AddPage((sender as Button).DataContext as Posishen));
         }
 
         private void TBoxSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
             UpdatesServices();
+        }
+
+        private void Addbtn(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new AddPage(null));
         }
     }
 }

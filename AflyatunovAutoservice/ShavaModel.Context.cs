@@ -13,17 +13,17 @@ namespace AflyatunovAutoservice
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class shavaEntities : DbContext
+    public partial class ShaurmaEntities : DbContext
     {
-        private static shavaEntities _context;
-        public static shavaEntities GetContext()
+        private static ShaurmaEntities _context;
+        public static ShaurmaEntities GetContext()
         {
-            if (_context == null)
-                _context = new shavaEntities();
+            if(_context == null)
+                _context = new ShaurmaEntities();   
             return _context;
         }
-        public shavaEntities()
-            : base("name=shavaEntities")
+        public ShaurmaEntities()
+            : base("name=ShaurmaEntities")
         {
         }
     
@@ -32,6 +32,7 @@ namespace AflyatunovAutoservice
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Entering> Entering { get; set; }
         public virtual DbSet<Posishen> Posishen { get; set; }
     }
 }

@@ -1,0 +1,68 @@
+﻿<Page x:Class="AflyatunovAutoservice.AddPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AflyatunovAutoservice"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Название" FontSize="15" Grid.Column="0" Grid.Row="0"
+                   HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
+        <TextBlock Text="Стоимость" FontSize="15" Grid.Column="0" Grid.Row="1"
+                   HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
+        <TextBlock Text="Вес-объем" FontSize="15" Grid.Column="0" Grid.Row="2"
+                   HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
+        <TextBlock Text="Фото" FontSize="15" Grid.Column="0" Grid.Row="3"
+                   HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
+
+        <TextBlock Grid.Column="1" Grid.Row="0" Height="30"></TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="1" Height="30" Width="200"
+                   HorizontalAlignment="Left"></TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="2" Height="30" Width="200"
+                   HorizontalAlignment="Left"></TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="3" Height="30" Width="200"
+                   HorizontalAlignment="Left"></TextBlock>
+        
+        <Button Name="SaveButton" Content="Сохранить" Grid.Row="4"
+                Grid.Column="0" Grid.ColumnSpan="2" Click="SaveButton_Click"></Button>
+        <Button Content="Изменить" x:Name="ChangePictureBtn" Click="ChangePictureBtn_Click"
+                HorizontalAlignment="Left" Grid.Column="1" Grid.Row="4"/>
+        
+        <TextBox Grid.Column="1" Grid.Row="0" Height="30"
+                   Text="{Binding Name}"></TextBox>
+        <TextBox Grid.Column="1" Grid.Row="1" Height="30" Width="200"
+                   HorizontalAlignment="Left" Text="{Binding Cost}"></TextBox>
+        <TextBox Grid.Column="1" Grid.Row="2" Height="30" Width="200"
+                   HorizontalAlignment="Left" Text="{Binding WeightOrVolume}"></TextBox>
+
+        <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left" Width="175">
+            <Image x:Name="LogoImage" Stretch="UniformToFill" MinHeight="50" Height="170" Width="160">
+                <Image.Source>
+                    <Binding Path="MainImagePath">
+                        <Binding.TargetNullValue>
+                            <ImageSource>
+                                Photo/pic.jpg
+                            </ImageSource>
+                        </Binding.TargetNullValue>
+                    </Binding>
+                </Image.Source>
+            </Image>
+
+        </StackPanel>
+    </Grid>
+</Page>

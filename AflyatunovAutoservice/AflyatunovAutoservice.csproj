@@ -78,8 +78,14 @@
     <Compile Include="AddEditPage.xaml.cs">
       <DependentUpon>AddEditPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AddPage.xaml.cs">
+      <DependentUpon>AddPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="auth.xaml.cs">
       <DependentUpon>auth.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Entering.cs">
+      <DependentUpon>ShavaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Manager.cs" />
     <Compile Include="Posishen.cs">
@@ -104,6 +110,10 @@
       <DependentUpon>ShavaModel.edmx</DependentUpon>
     </Compile>
     <Page Include="AddEditPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -206,6 +216,8 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Photo\pic.jpg" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="ShavaModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ShavaModel.edmx</DependentUpon>

@@ -46,6 +46,10 @@
 
         <Button Content="Сделать заказ" Name="AddButton" Click="AddButton_Click"
                 HorizontalAlignment="Right" VerticalAlignment="Bottom"></Button>
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Left">
+            <Button Name="Add" Content="Добавить продукт" Click="Addbtn" FontSize="20"/>
+        </StackPanel>
+
 
 
         <ListView Name="ServiceListView" Grid.Row="2">
