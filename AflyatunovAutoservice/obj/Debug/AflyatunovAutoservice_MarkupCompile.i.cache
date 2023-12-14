@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\3 курс\лабы Рпм\лаба 8\Autoservice\AflyatunovAutoservice\obj\Debug\
+D:\3 курс\лабы Рпм\Проект внедрение\Autoservice\AflyatunovAutoservice\obj\Debug\
 AflyatunovAutoservice
 none
 false
 DEBUG;TRACE
-D:\3 курс\лабы Рпм\лаба 8\Autoservice\AflyatunovAutoservice\App.xaml
-4-1860769784
-2-666174283
-24365023135
-18159264257
-AddEditPage.xaml;MainWindow.xaml;ServicePage.xaml;SignUpPage.xaml;
+D:\3 курс\лабы Рпм\Проект внедрение\Autoservice\AflyatunovAutoservice\App.xaml
+41131954109
+2-1293652271
+14-1270131307
+21972366021
+AddEditPage.xaml;auth.xaml;MainWindow.xaml;ServicePage.xaml;
 
-False
+True
 

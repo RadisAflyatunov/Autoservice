@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:AflyatunovAutoservice"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Услуги атосервиса" FontFamily="Tw Cen MT"
+      Title="Шаурма на ходу" FontFamily="Tw Cen MT"
       IsVisibleChanged="Page_IsVisibleChanged">
 
 
@@ -34,41 +34,19 @@
                                     Click="RightDirButton_Click"></Button>
         </StackPanel>
 
-        <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center">
+        <WrapPanel Orientation="Horizontal" HorizontalAlignment="Left">
             <StackPanel Margin="10" Orientation="Horizontal">
-                <TextBlock Text="Введите название для поиска " TextAlignment="Right" 
-                            Width="300" FontSize="15"></TextBlock>
-                <TextBox Name="TBoxSearch" TextChanged="TBoxSearch_TextChanged"
+                <TextBlock Text="Введите название для поиска " TextAlignment="Left" 
+                            Width="210" FontSize="15"></TextBlock>
+                <TextBox Name="TBoxSearch" TextChanged="TBoxSearch_TextChanged" TextAlignment="Left"
                             Width="300" FontSize="15"></TextBox>
             </StackPanel>
 
-            <StackPanel Orientation="Horizontal" Margin="10">
-                <TextBlock Text="Введите название для поиска " TextAlignment="Right"
-                           Width="300" FontSize="20"></TextBlock>
-                <ComboBox Name="ComboType" SelectionChanged="ComboType_SelectionChanged"
-                          FontSize="15" Width="200">
-                    <TextBlock>Все
-                    </TextBlock>
-                    <TextBlock>от 0 до 5%</TextBlock>
-                    <TextBlock>от 5 до 15%</TextBlock>
-                    <TextBlock>от 15 до 30%</TextBlock>
-                    <TextBlock>от 30 до 70%</TextBlock>
-                    <TextBlock>от 70 до 100%</TextBlock>
-                </ComboBox>
-            </StackPanel>
         </WrapPanel>
 
-        <StackPanel Grid.Row="1" Orientation="Vertical" Margin="5">
-            <RadioButton Content="По возрастанию стоимости" GroupName="Sort"
-                         Width="300" FontSize="20" Checked="RButtonUp_Checked"
-                         Name="RButtonUp"></RadioButton>
-            <RadioButton Content="По убыванию стоимости" GroupName="Sort"
-                         Width="300" FontSize="20" Checked="RButtonDown_Checked"
-                         Name="RButtonDown"></RadioButton>
-        </StackPanel>
-        <Button Content="Добавить" Name="AddButton" Click="AddButton_Click"
+        <Button Content="Сделать заказ" Name="AddButton" Click="AddButton_Click"
                 HorizontalAlignment="Right" VerticalAlignment="Bottom"></Button>
-        
+
 
         <ListView Name="ServiceListView" Grid.Row="2">
             <ListView.ItemTemplate>
@@ -88,30 +66,24 @@
                         <Image Width="200" Grid.Column="0" Grid.RowSpan="4" 
                                Stretch="UniformToFill" HorizontalAlignment="Center">
                             <Image.Source>
-                                <Binding Path="Main_Image">
+                                <Binding Path="MainImagePath">
                                     <Binding.TargetNullValue>
                                         <ImageSource>
-                                            Услуги автосервиса/picture.jpeg
+                                            Photo/pic.jpg
                                         </ImageSource>
                                     </Binding.TargetNullValue>
                                 </Binding>
                             </Image.Source>
                         </Image>
 
-                        <TextBlock Text="{Binding Name_of_the_service}"    Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" FontSize="20" TextWrapping="Wrap"></TextBlock>
+                        <TextBlock Text="{Binding Name}"    Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" FontSize="20" TextWrapping="Wrap"></TextBlock>
                         <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="1">
-                            <TextBlock Text="{Binding OldCost}" FontSize="20" TextDecorations="Strikethrough" Margin="5"></TextBlock>
-                            <TextBlock Text="{Binding NewCost}" FontSize="20" Margin="5"></TextBlock>
-                            <TextBlock Text="{Binding Duration}" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right" FontSize="20" Margin="5"></TextBlock>
-                            <TextBlock Text=" мин." FontSize="20" Margin="5"></TextBlock>
+                            <TextBlock Text="{Binding Cost , StringFormat=Стоимость {0} }" FontSize="20" Margin="5"></TextBlock>
                         </StackPanel>
-                        
-                        <TextBlock Text="{Binding Current_discount, StringFormat=*скидка {0} % }" Opacity="{Binding Current_discount}" Margin="5" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" FontSize="16"></TextBlock>
-                        
+                        <TextBlock Text="{Binding WeightOrVolume}"  Margin="5" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" FontSize="16"></TextBlock>
+                                             
                         <StackPanel Grid.Column="1" Grid.Row="3" Orientation="Horizontal">
                             <Button Name="EditButton" Content="редактировать" Margin="2" Click="EditButton_Click"></Button>
-                            <Button Name="DeleteButton" Content="удалить" Margin="2" Click="DeleteButton_Click"></Button>
-                            <Button Name="SignUpButton" Content="записать" Margin="2" Click="SignUpButton_Click"></Button>
                         </StackPanel>
 
 

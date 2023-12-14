@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище shavaModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "shava.dbo.Posishen" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+  <EntityType Name="Posishen">
+    <Key>
+      <PropertyRef Name="Name" />
+    </Key>
+    <Property Name="ID" Type="int" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Cost" Type="int" />
+    <Property Name="WeightOrVolume" Type="nvarchar(max)" />
+    <Property Name="MainImagePath" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityContainer Name="Хранилище shavaModelContainer">
+    <EntitySet Name="Posishen" EntityType="Self.Posishen" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Posishen].[ID] AS [ID], 
+    [Posishen].[Name] AS [Name], 
+    [Posishen].[Cost] AS [Cost], 
+    [Posishen].[WeightOrVolume] AS [WeightOrVolume], 
+    [Posishen].[MainImagePath] AS [MainImagePath]
+    FROM [dbo].[Posishen] AS [Posishen]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

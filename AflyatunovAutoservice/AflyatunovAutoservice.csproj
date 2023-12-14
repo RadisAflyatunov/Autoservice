@@ -14,6 +14,8 @@
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -41,6 +43,15 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="MaterialDesignColors, Version=2.1.4.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>packages\MaterialDesignColors.2.1.4\lib\net462\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=4.9.0.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>packages\MaterialDesignThemes.4.9.0\lib\net462\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Xaml.Behaviors.Wpf.1.1.77\lib\net462\Microsoft.Xaml.Behaviors.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
@@ -67,62 +78,36 @@
     <Compile Include="AddEditPage.xaml.cs">
       <DependentUpon>AddEditPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AflyatunovModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AflyatunovModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AflyatunovModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AflyatunovModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AflyatunovModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AflyatunovModel.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Client.cs">
-      <DependentUpon>AflyatunovModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ClientService.cs">
-      <DependentUpon>AflyatunovModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DocumentByService.cs">
-      <DependentUpon>AflyatunovModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Gender.cs">
-      <DependentUpon>AflyatunovModel.tt</DependentUpon>
+    <Compile Include="auth.xaml.cs">
+      <DependentUpon>auth.xaml</DependentUpon>
     </Compile>
     <Compile Include="Manager.cs" />
-    <Compile Include="Manufacturer.cs">
-      <DependentUpon>AflyatunovModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Product.cs">
-      <DependentUpon>AflyatunovModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ProductPhoto.cs">
-      <DependentUpon>AflyatunovModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ProductSale.cs">
-      <DependentUpon>AflyatunovModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Service.cs">
-      <DependentUpon>AflyatunovModel.tt</DependentUpon>
+    <Compile Include="Posishen.cs">
+      <DependentUpon>ShavaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="ServicePage.xaml.cs">
       <DependentUpon>ServicePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ServicePhoto.cs">
-      <DependentUpon>AflyatunovModel.tt</DependentUpon>
+    <Compile Include="ShavaModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShavaModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="SignUpPage.xaml.cs">
-      <DependentUpon>SignUpPage.xaml</DependentUpon>
+    <Compile Include="ShavaModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShavaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Tag.cs">
-      <DependentUpon>AflyatunovModel.tt</DependentUpon>
+    <Compile Include="ShavaModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShavaModel.edmx</DependentUpon>
     </Compile>
     <Page Include="AddEditPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="auth.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -139,10 +124,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="ServicePage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="SignUpPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -165,17 +146,17 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="AflyatunovModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>AflyatunovModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="AflyatunovModel.edmx.diagram">
-      <DependentUpon>AflyatunovModel.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <EntityDeploy Include="ShavaModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ShavaModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ShavaModel.edmx.diagram">
+      <DependentUpon>ShavaModel.edmx</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -207,16 +188,41 @@
     <Resource Include="Услуги автосервиса\Электрика.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AflyatunovModel.Context.tt">
+    <Resource Include="Photo\picture.jpeg" />
+    <Resource Include="Photo\Картошка фри.jpg" />
+    <Resource Include="Photo\кола.jpg" />
+    <Resource Include="Photo\Куш.jpeg" />
+    <Resource Include="Photo\сок манговы.jpg" />
+    <Resource Include="Photo\Соус барбекю.png" />
+    <Resource Include="Photo\соус кетчуп.png" />
+    <Resource Include="Photo\Соус сырныый.jpg" />
+    <Resource Include="Photo\хот дог с курицей.jpg" />
+    <Resource Include="Photo\хот дог с сосиской.png" />
+    <Resource Include="Photo\чай зеленый.jpg" />
+    <Resource Include="Photo\черный чай.jpg" />
+    <Resource Include="Photo\Шаурма вегетарианская.jpg" />
+    <Resource Include="Photo\Шаурма классик.jpg" />
+    <Resource Include="Photo\Шаурма сырная.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Photo\pic.jpg" />
+    <Content Include="ShavaModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>AflyatunovModel.edmx</DependentUpon>
-      <LastGenOutput>AflyatunovModel.Context.cs</LastGenOutput>
+      <DependentUpon>ShavaModel.edmx</DependentUpon>
+      <LastGenOutput>ShavaModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="AflyatunovModel.tt">
+    <Content Include="ShavaModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>AflyatunovModel.edmx</DependentUpon>
-      <LastGenOutput>AflyatunovModel.cs</LastGenOutput>
+      <DependentUpon>ShavaModel.edmx</DependentUpon>
+      <LastGenOutput>ShavaModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets'))" />
+  </Target>
 </Project>
